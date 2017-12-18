@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "bin": {
-    "cup": "./bin/index"
+    "upoint": "./bin/index.js"
   },
   "engines": {
     "node": ">=4.0.0"

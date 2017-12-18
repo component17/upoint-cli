@@ -14,7 +14,14 @@ program
     .option('-e, --email <email>')
     .option('-p, --password <password>')
     .action(function(action) {
+        console.log(action);
+        if(!action) {
+            return help();
+        }
         switch(action) {
+            case 'nextver':
+                require('./nextver');
+                break;
             case 'create':
                 require('./vue-init');
                 break;
@@ -27,6 +34,7 @@ program
                 require('./release.js');
                 break;
 
+            case 'list':
             case 'help':
                 help();
                 break;
@@ -66,6 +74,7 @@ program
         }
 
     })
+  
     .parse(process.argv);
 
 
